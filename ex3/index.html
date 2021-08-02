@@ -1,0 +1,16 @@
+<ul>
+  <li id="first">HTML</li>
+  <li id="second">CSS</li>
+  <li id="third">JavaScript</li>
+</ul>
+<script>
+  var lis = document.getElementsByTagName("li");
+  console.log(lis.constructor.name);
+  console.group('before');
+  console.log(lis);
+  console.groupEnd();
+  lis[0].remove();
+  console.group('after');
+  console.log(lis);
+  console.groupEnd();
+</script>

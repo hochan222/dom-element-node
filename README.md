@@ -134,9 +134,32 @@ interface HTMLElement : Element {
 
 즉, `HTMLElement`의 attribute는 공통적으로 갖고, 세부 특성에 따라 세분화됨을 알 수 있다.
 
-### HTMLCollection interface
+## ex3
 
 HTMLCollection은 유사 배열로 반환되며, HTMLCollection의 목록은 실시간으로 변경된다.
+
+```html
+<ul>
+  <li id="first">HTML</li>
+  <li id="second">CSS</li>
+  <li id="third">JavaScript</li>
+</ul>
+<script>
+  var lis = document.getElementsByTagName("li");
+  console.log(lis.constructor.name);
+  console.group('before');
+  console.log(lis);
+  console.groupEnd();
+  lis[0].remove();
+  console.group('after');
+  console.log(lis);
+  console.groupEnd();
+</script>
+```
+
+<img src="https://user-images.githubusercontent.com/22424891/127814375-bc391463-22bc-4a99-b93b-c81d420c1d7d.png" height="300px" />
+
+### HTMLCollection interface
 
 ```js
 interface HTMLCollection {
@@ -145,6 +168,8 @@ interface HTMLCollection {
   Node               namedItem(in DOMString name);
 };
 ```
+
+마지막으로 HTMLDocument의 interface 이다.
 
 ### HTMLDocument interface
 
