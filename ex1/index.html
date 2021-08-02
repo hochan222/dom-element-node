@@ -1,0 +1,14 @@
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li id="JS">JavaScript</li>
+</ul>
+<script>
+  var li = document.getElementById("JS");
+  console.log(li.constructor.name);
+  console.log(li);
+  var lis = document.getElementsByTagName("li");
+  console.log(lis.constructor.name);
+  console.log(lis);
+  console.log(lis["JS"]);
+</script>
